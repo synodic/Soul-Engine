@@ -9,11 +9,8 @@ if(BUILD_CPU_COMPUTE)
 
 endif()
 
-if(BUILD_CUDA_COMPUTE)
-
-    add_subdirectory("Mock")
-
-endif()
+# Mock backend for testing
+add_subdirectory("Mock")
 
 if(BUILD_CUDA_COMPUTE)
 
@@ -22,7 +19,7 @@ if(BUILD_CUDA_COMPUTE)
 endif()
 
 
-if(BUILD_CUDA_COMPUTE)
+if(BUILD_OPENCL_COMPUTE)
 
     add_subdirectory("OpenCL")
 

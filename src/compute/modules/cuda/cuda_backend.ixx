@@ -1,7 +1,7 @@
 export module synodic.soul.engine:compute.cuda.backend;
 
 import :compute.compute_backend;
-import :utility;
+import synodic.soul.core;
 
 export class CUDABackend : public ComputeBackend<CUDABackend> {
 

@@ -1,4 +1,4 @@
-export module synodic.soul.engine:core.interface.module;
+export module synodic.soul.core:module;
 
 //Common interface for modules.
 export template<typename T>

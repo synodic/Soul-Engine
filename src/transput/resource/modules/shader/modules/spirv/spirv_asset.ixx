@@ -1,6 +1,6 @@
-export module synodic.soul.engine:transput.spirv.asset;
+export module synodic.soul.transput:spirv_asset;
 
-import :transput.shader.asset;
+import :shader_asset;
 
 export class SPIRVAsset : public ShaderAsset {
 

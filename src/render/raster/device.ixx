@@ -1,4 +1,4 @@
-export module synodic.soul.engine:render.raster.device;
+export module synodic.soul.raster:device;
 
 import std;
 

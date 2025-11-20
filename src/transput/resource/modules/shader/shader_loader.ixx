@@ -1,6 +1,6 @@
-export module synodic.soul.engine:transput.shader.loader;
+export module synodic.soul.transput:shader_loader;
 
-import :transput.resource;
+import :resource;
 import std;
 
 export class ShaderLoader : public ResourceLoader {

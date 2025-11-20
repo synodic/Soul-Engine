@@ -1,4 +1,4 @@
-export module synodic.soul.engine:compute.buffer;
+export module synodic.soul.compute:buffer;
 
 export template <typename T>
 class ComputeBuffer {

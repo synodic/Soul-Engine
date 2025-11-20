@@ -1,11 +1,10 @@
-export module synodic.soul.engine:display.gui;
+export module synodic.soul.gui;
 
-export import :display.gui.widget;
-export import :display.gui.layout;
+export import :widget;
+export import :layout;
 
 import std;
-import :core.interface.module;
-import :core.system;
+import synodic.soul.core;
 
 // Note: Forward declarations used here to avoid circular dependencies
 // These types are only used in shared_ptr parameters in factory methods

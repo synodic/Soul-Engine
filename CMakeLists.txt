@@ -24,6 +24,7 @@ project(SoulEngine
 find_package(honesty REQUIRED)
 find_package(synodic-template-library REQUIRED)
 find_package(cppaste REQUIRED)
+find_package(SDL3 REQUIRED)
 
 ##############################################
 #Options
@@ -61,6 +62,9 @@ target_link_libraries(soul-engine
     PUBLIC
         synodic::cppaste
     PRIVATE
+		synodic::honesty
+		synodic::synodic-template-library
+		SDL3::SDL3
 )
 
 # Create file set for C++20 modules

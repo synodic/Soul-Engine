@@ -1,4 +1,4 @@
-export module synodic.soul.engine:core.frame;
+export module synodic.soul.core:frame;
 
 import std;
 

@@ -1,8 +1,33 @@
-export module synodic.soul.engine:display.window.mock;
+export module synodic.soul.window.backend.mock;
 
-import :display.window;
+import synodic.soul.window;
 
-export class MockWindowBackend : public WindowModule
+// Mock window implementation (no actual windowing)
+export class MockWindow : public Window<MockWindow>
+{
+public:
+	explicit MockWindow(const WindowParameters& params) :
+		Window<MockWindow>(params)
+	{
+	}
+
+	~MockWindow() = default;
+
+	MockWindow(const MockWindow&)	  = delete;
+	MockWindow(MockWindow&&) noexcept = default;
+
+	MockWindow& operator=(const MockWindow&)	 = delete;
+	MockWindow& operator=(MockWindow&&) noexcept = default;
+
+	// Mock-specific: no native handle
+	bool IsValid() const
+	{
+		return true;
+	}
+};
+
+// Mock Window Backend
+export class MockWindowBackend : public WindowModule<MockWindow>
 {
 public:
 	MockWindowBackend()			  = default;
@@ -16,15 +41,17 @@ public:
 
 	void Update() override
 	{
-	}
-
-	bool Active() override
-	{
-		return false;
+		// Mock: do nothing
 	}
 
 	std::span<const char*> GetRasterExtensions() override
 	{
 		return {};
+	}
+
+protected:
+	void OnWindowCreated(MockWindow& window) override
+	{
+		// Mock: no actual window creation
 	}
 };

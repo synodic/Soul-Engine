@@ -1,4 +1,4 @@
-export module synodic.soul.engine:parameters;
+export module synodic.soul.core:parameters;
 
 import std;
 
@@ -23,8 +23,8 @@ namespace synodic::soul
 			}
 		}
 
-		Property<std::int32_t> engineRefreshRate;  // the update rate tied to physics and...
-		Property<std::uint32_t> threadCount;  // the amount of threads at the program's disposal
+		Property<std::int32_t> engineRefreshRate;  // TODO: Move to display/raster
+		Property<std::uint32_t> threadCount;  // TODO: Move to scheduler
 	};
 }
 

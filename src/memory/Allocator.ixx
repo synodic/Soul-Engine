@@ -1,4 +1,4 @@
-export module synodic.soul.engine:memory.allocator;
+export module synodic.soul.memory:allocator;
 
 import std;
 

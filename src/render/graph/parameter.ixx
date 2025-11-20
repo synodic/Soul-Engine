@@ -1,7 +1,7 @@
-export module synodic.soul.engine:render.graph.parameter;
+export module synodic.soul.render.graph:parameter;
 
-import :core.composition.entity.registry;
-import :render.raster.types;
+import synodic.soul.core;
+import synodic.soul.raster;
 import std;
 
 export struct RenderTaskParameters {

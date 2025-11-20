@@ -1,4 +1,4 @@
-export module synodic.soul.engine:tracer.filter;
+export module synodic.soul.tracer:filter;
 
 // Filter namespace - implementation deferred until needed
 // export namespace Filter {

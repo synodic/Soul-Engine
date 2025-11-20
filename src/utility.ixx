@@ -1,4 +1,4 @@
-export module synodic.soul.engine:utility;
+export module synodic.soul.core:utility;
 
 import std;
 

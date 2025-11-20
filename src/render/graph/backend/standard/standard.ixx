@@ -1,8 +1,8 @@
-export module synodic.soul.engine:render.graph.standard;
+export module synodic.soul.render.graph.backend.standard;
 
-import :render.graph;
+import synodic.soul.render.graph;
 
 export class StandardRenderGraphBackend
 {
-	
+
 };

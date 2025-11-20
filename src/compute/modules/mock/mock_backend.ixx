@@ -1,7 +1,7 @@
 export module synodic.soul.engine:compute.mock.backend;
 
 import :compute.compute_backend;
-import :utility;
+import synodic.soul.core;
 
 export class MockBackend : public ComputeBackend<MockBackend> {
 

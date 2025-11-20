@@ -1,4 +1,4 @@
-export module synodic.soul.engine:transput.resource;
+export module synodic.soul.transput:resource;
 
 import std;
 

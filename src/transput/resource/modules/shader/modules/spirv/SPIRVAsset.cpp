@@ -1,12 +1,5 @@
-export module synodic.soul.engine:transput.spirv.asset;
+module synodic.soul.transput;
 
-import :transput.shader.asset;
+import :shader_asset;
 
-export class SPIRVAsset : public ShaderAsset {
-
-public:
-
-	SPIRVAsset() = default;
-	~SPIRVAsset() = default;
-
-};
+// SPIRVAsset has default implementation, no additional code needed

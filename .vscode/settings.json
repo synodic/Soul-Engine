@@ -74,6 +74,13 @@
         "xutility": "cpp",
         "array": "cpp",
         "condition_variable": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "numeric": "cpp",
+        "ranges": "cpp",
+        "regex": "cpp",
+        "set": "cpp",
+        "span": "cpp",
+        "unordered_set": "cpp",
+        "variant": "cpp"
     }
 }

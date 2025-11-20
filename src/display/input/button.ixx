@@ -1,4 +1,4 @@
-export module synodic.soul.engine:display.input.button;
+export module synodic.soul.input:button;
 
 import std;
 

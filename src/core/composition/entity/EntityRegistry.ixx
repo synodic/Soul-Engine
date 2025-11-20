@@ -1,9 +1,9 @@
-export module synodic.soul.engine:core.composition.entity.registry;
+export module synodic.soul.core:entity;
 
 import std;
 import :types;
 import :utility;
-import :core.composition.component;
+import :component;
 
 // Entity class
 export class Entity {

@@ -1,1 +1,1 @@
-module synodic.soul.engine:compute.mock.backend;
+module synodic.soul.compute.backend.mock;

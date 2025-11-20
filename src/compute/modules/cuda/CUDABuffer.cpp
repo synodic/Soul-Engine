@@ -1,1 +1,1 @@
-module synodic.soul.engine:compute.cuda.buffer;
+module synodic.soul.compute.backend.cuda;

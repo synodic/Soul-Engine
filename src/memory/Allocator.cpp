@@ -1,5 +1,5 @@
-module synodic.soul.engine;
-import :memory.allocator;
+module synodic.soul.memory;
+import :allocator;
 
 /*The constructor for the allocator
 Arguments: size - the amount of memory to use

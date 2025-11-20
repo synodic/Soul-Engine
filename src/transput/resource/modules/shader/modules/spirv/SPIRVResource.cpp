@@ -1,23 +1,10 @@
-export module synodic.soul.engine:transput.spirv.resource;
+module synodic.soul.transput;
 
-import :transput.shader.resource;
+import :shader_resource;
+import :spirv_resource;
 import std;
 
-export class SPIRVResource : public ShaderResource {
-
-public:
-
-	SPIRVResource(std::string_view);
-	~SPIRVResource() = default;
-
-
-private:
-
-
-
-};
-
-inline SPIRVResource::SPIRVResource(const std::string_view resourcePath):
+SPIRVResource::SPIRVResource(const std::string_view resourcePath):
     ShaderResource(resourcePath)
 {
 

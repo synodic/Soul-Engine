@@ -1,9 +1,8 @@
-export module synodic.soul.engine:render.graph.builder;
+export module synodic.soul.render.graph:builder;
 
-import :render.graph.parameter;
-import :render.raster.resource;
-import :render.raster;
-import :core.composition.entity.registry;
+import synodic.soul.core;
+import synodic.soul.raster;
+import :parameter;
 import std;
 
 export class RenderGraphBuilder final {

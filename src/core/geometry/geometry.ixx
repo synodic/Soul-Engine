@@ -1,7 +1,7 @@
 export module synodic.soul.engine:core.geometry;
 
-import :core.composition.component;
-import :types;
+import std;
+import synodic.soul.core;
 
 export class Vertex : Component
 {

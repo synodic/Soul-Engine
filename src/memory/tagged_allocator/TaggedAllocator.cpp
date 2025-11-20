@@ -1,7 +1,7 @@
-module synodic.soul.engine;
-import :memory.allocator;
-import :memory.tagged_allocator.tagged_allocator;
-import :memory.tagged_allocator.tagged_heap;
+module synodic.soul.memory;
+import :allocator;
+import :tagged_allocator;
+import :tagged_heap;
 
 import std;
 

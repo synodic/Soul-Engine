@@ -1,11 +1,5 @@
-export module synodic.soul.engine:transput.shader.asset;
+module synodic.soul.transput;
 
-import :transput.resource;
+import :resource;
 
-export class ShaderAsset : public Asset {
-
-public:
-	ShaderAsset() = default;
-	~ShaderAsset() = default;
-
-};
+// ShaderAsset has default implementation, no additional code needed

@@ -1,6 +1,6 @@
-export module synodic.soul.engine:transput.spirv.loader;
+export module synodic.soul.transput:spirv_loader;
 
-import :transput.shader.loader;
+import :shader_loader;
 import std;
 
 export class SPIRVLoader : public ShaderLoader {

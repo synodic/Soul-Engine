@@ -1,19 +1,22 @@
-export module synodic.soul.engine:tracer.film;
+export module synodic.soul.tracer:film;
 
-// TODO: Replace glm types with module types
-// #include <glm/glm.hpp>
+import std;
+
+// TODO: Replace with proper vector types
+struct uvec2 { unsigned int x, y; };
+struct vec4 { float x, y, z, w; };
 
 export class Film {
 public:
 	Film();
 	~Film();
 
-	glm::uvec2 resolutionPrev;
-	glm::uvec2 resolution;
-	glm::uvec2 resolutionMax;
+	uvec2 resolutionPrev;
+	uvec2 resolution;
+	uvec2 resolutionMax;
 
 	float resolutionRatio;
 
-	glm::vec4* results;
+	vec4* results;
 	std::int32_t* hits;
 };

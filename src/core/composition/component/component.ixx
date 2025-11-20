@@ -1,4 +1,4 @@
-export module synodic.soul.engine:core.composition.component;
+export module synodic.soul.core:component;
 
 export class Component
 {

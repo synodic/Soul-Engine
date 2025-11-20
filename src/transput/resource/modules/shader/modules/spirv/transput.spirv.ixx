@@ -1,5 +1,5 @@
-export module synodic.soul.engine:transput.spirv;
+export module synodic.soul.transput:spirv;
 
-export import :transput.spirv.resource;
-export import :transput.spirv.loader;
-export import :transput.spirv.asset;
+export import :spirv_resource;
+export import :spirv_loader;
+export import :spirv_asset;

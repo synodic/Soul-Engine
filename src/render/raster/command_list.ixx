@@ -1,7 +1,7 @@
-export module synodic.soul.engine:render.raster.command_list;
+export module synodic.soul.raster:command_list;
 
 import std;
-import :render.raster.commands;
+import :commands;
 
 export class CommandList {
 

@@ -1,4 +1,4 @@
-export module synodic.soul.engine:types;
+export module synodic.soul.core:types;
 
 import std;
 

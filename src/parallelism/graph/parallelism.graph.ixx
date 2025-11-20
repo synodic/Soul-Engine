@@ -1,5 +1,5 @@
-export module synodic.soul.engine:parallelism.graph;
+export module synodic.soul.graph;
 
-export import :parallelism.graph.graph_node;
-export import :parallelism.graph.graph_task;
-export import :parallelism.graph.graph;
+export import :graph_node;
+export import :graph_task;
+export import :graph;

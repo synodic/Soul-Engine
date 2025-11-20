@@ -1,6 +1,6 @@
-export module synodic.soul.engine:display.input.input_set;
+export module synodic.soul.input:input_set;
 
-import :types;
+import synodic.soul.core;
 
 export class InputSet : public TypeID<InputSet> {
 

@@ -1,6 +1,7 @@
-export module synodic.soul.engine:compute.policy;
+export module synodic.soul.compute:policy;
 
-import :types;
+import std;
+import synodic.soul.core;
 
 export class ComputePolicy {
 public:

@@ -1,7 +1,7 @@
 export module synodic.soul.engine:compute.mock.device;
 
 import :compute.compute_device;
-import :utility;
+import synodic.soul.core;
 
 export class MockDevice : public ComputeDevice<MockDevice> {
 

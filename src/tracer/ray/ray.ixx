@@ -1,6 +1,7 @@
-export module synodic.soul.engine:tracer.ray;
+export module synodic.soul.tracer:ray;
 
-import :types;
+import std;
+import synodic.soul.core;
 import std;
 
 // TODO: Replace glm types with module types

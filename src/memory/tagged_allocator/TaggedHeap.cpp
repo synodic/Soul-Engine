@@ -1,6 +1,6 @@
-module synodic.soul.engine;
+module synodic.soul.memory;
 
-import :memory.tagged_allocator.tagged_heap;
+import :tagged_heap;
 import std;
 
 TaggedHeap::TaggedHeap(void* mem, size_t size) {

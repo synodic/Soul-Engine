@@ -1,7 +1,7 @@
-export module synodic.soul.engine:tracer.ray_job;
+export module synodic.soul.tracer:ray_job;
 
-import synodic.soul.engine:types;
-import synodic.soul.engine:tracer.camera;
+import synodic.soul.core;
+import :camera;
 
 export enum rayType {
 	RayCOLOUR,              // RayCOLOUR: A vec3 of RGB values to be displayed

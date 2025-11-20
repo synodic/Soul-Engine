@@ -1,6 +1,6 @@
-export module synodic.soul.engine:display.input.mock;
+export module synodic.soul.input.backend.mock;
 
-import :display.input.input_module;
+import synodic.soul.input;
 
 export class MockInputBackend : public InputModule
 {

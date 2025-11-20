@@ -1,4 +1,4 @@
-export module synodic.soul.engine:parallelism.scheduler;
+export module synodic.soul.scheduler;
 
-export import :parallelism.scheduler.task_parameters;
-export import :parallelism.scheduler.scheduler_module;
+export import :task_parameters;
+export import :scheduler_module;

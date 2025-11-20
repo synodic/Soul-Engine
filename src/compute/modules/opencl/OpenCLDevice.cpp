@@ -1,1 +1,1 @@
-module synodic.soul.engine:compute.opencl.device;
+module synodic.soul.compute.backend.opencl;

@@ -1,33 +1,13 @@
-export module synodic.soul.engine:tracer.film;
+module synodic.soul.tracer;
 
 import std;
 
-// TODO: Replace glm types with module types
-// #include <glm/glm.hpp>
-struct uvec2 { std::uint32_t x, y; };
-struct vec4 { float x, y, z, w; };
-
-export class Film {
-public:
-	Film();
-	~Film();
-
-	uvec2 resolutionPrev;
-	uvec2 resolution;
-	uvec2 resolutionMax;
-
-	float resolutionRatio;
-
-	vec4* results;
-	std::int32_t* hits;
-};
-
 //results(S_BEST_DEVICE)
-inline Film::Film(){
+Film::Film(){
 	resolutionRatio = 1.0f;
 }
 
-inline Film::~Film() {
+Film::~Film() {
 
 }
 

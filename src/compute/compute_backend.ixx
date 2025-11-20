@@ -1,6 +1,6 @@
-export module synodic.soul.engine:compute.backend;
+export module synodic.soul.compute:backend;
 
-import :compute.policy;
+import :policy;
 
 export template<typename T>
 class ComputeBackend {

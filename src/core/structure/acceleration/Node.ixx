@@ -1,7 +1,8 @@
 export module synodic.soul.engine:core.structure.acceleration.node;
 
+import std;
+import synodic.soul.core;
 import :core.geometry.bounding_box;
-import :types;
 
 export class Node
 {

@@ -1,62 +1,10 @@
-export module synodic.soul.engine:structures;
+export module synodic.soul.core:structures;
 
 import std;
 
-// Span: Non-owning view over a contiguous sequence (similar to std::span)
-// Using std::span namespace for compatibility
-export namespace std {
-
-template <typename T>
-class span {
-public:
-    using element_type = T;
-    using value_type = std::remove_cv_t<T>;
-    using size_type = std::size_t;
-    using pointer = T*;
-    using reference = T&;
-    using iterator = T*;
-
-    // Constructors
-    constexpr span() noexcept : data_(nullptr), size_(0) {}
-
-    constexpr span(pointer ptr, size_type count) noexcept
-        : data_(ptr), size_(count) {}
-
-    constexpr span(pointer first, pointer last) noexcept
-        : data_(first), size_(last - first) {}
-
-    template <std::size_t N>
-    constexpr span(element_type (&arr)[N]) noexcept
-        : data_(arr), size_(N) {}
-
-    template <typename Container>
-    constexpr span(Container& cont) noexcept
-        : data_(cont.data()), size_(cont.size()) {}
-
-    // Element access
-    constexpr reference operator[](size_type idx) const noexcept {
-        return data_[idx];
-    }
-
-    constexpr pointer data() const noexcept { return data_; }
-    constexpr size_type size() const noexcept { return size_; }
-    constexpr bool empty() const noexcept { return size_ == 0; }
-
-    // Iterators
-    constexpr iterator begin() const noexcept { return data_; }
-    constexpr iterator end() const noexcept { return data_ + size_; }
-
-    // Subviews
-    constexpr span<element_type> subspan(size_type offset, size_type count) const noexcept {
-        return span(data_ + offset, count);
-    }
-
-private:
-    pointer data_;
-    size_type size_;
-};
-
-} // namespace std
+// Note: std::span is already provided by the standard library (C++20)
+// We just re-export it for convenience
+export using std::span;
 
 // RingBuffer: Fixed-size circular buffer
 export template <typename T, std::size_t N>

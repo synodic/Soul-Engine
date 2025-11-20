@@ -1,60 +1,73 @@
-export module synodic.soul.engine:display.window;
+export module synodic.soul.window;
 
-export import :display.window.monitor;
+import synodic.soul.core;
 
-import :parameters;
-import :core.composition.entity.registry;
+export import :monitor;
 
-export class Window
+export template<typename Derived>
+class Window
 {
-
 public:
+	Window(const WindowParameters& params) :
+		layout_(),
+		surface_(),
+		windowParams_(params)
+	{
+	}
 
-	Window(const WindowParameters&);
-	virtual ~Window() = default;
+	~Window() = default;
 
-	Window(const Window &) = delete;
-	Window(Window &&) noexcept = default;
+	Window(const Window&)	  = delete;
+	Window(Window&&) noexcept = default;
 
-	Window& operator=(const Window &) = delete;
-	Window& operator=(Window &&) noexcept = default;
+	Window& operator=(const Window&)	 = delete;
+	Window& operator=(Window&&) noexcept = default;
 
-	WindowParameters& Parameters();
-	Entity Surface();
+	WindowParameters& Parameters()
+	{
+		return windowParams_;
+	}
+
+	const WindowParameters& Parameters() const
+	{
+		return windowParams_;
+	}
+
+	Entity Surface()
+	{
+		return surface_;
+	}
+
+	Entity Layout()
+	{
+		return layout_;
+	}
 
 protected:
-
 	Entity layout_;
 	Entity surface_;
 	WindowParameters windowParams_;
 
+	Derived& GetDerived()
+	{
+		return static_cast<Derived&>(*this);
+	}
+
+	const Derived& GetDerived() const
+	{
+		return static_cast<const Derived&>(*this);
+	}
 };
 
-inline Window::Window(const WindowParameters& params) :
-	layout_(),
-	windowParams_(params)
-{
-	//std::make_unique<SingleLayout>();
-}
-
-inline WindowParameters& Window::Parameters()
-{
-
-	return windowParams_;
-
-}
-
-inline Entity Window::Surface()
-{
-
-	return surface_;
-
-}
-
-export class WindowModule
+export template<typename WindowType>
+class WindowModule
 {
 public:
-	WindowModule();
+	WindowModule() :
+		active_(false)
+	{
+	}
+
 	virtual ~WindowModule() = default;
 
 	WindowModule(const WindowModule&)	  = delete;
@@ -63,16 +76,69 @@ public:
 	WindowModule& operator=(const WindowModule&)	 = delete;
 	WindowModule& operator=(WindowModule&&) noexcept = default;
 
-	virtual void Update() = 0;
-	virtual bool Active() = 0;
+	WindowType& CreateWindow(const WindowParameters& params)
+	{
+		auto& window = windows_.emplace_back(params);
+		active_		 = true;
 
-	// TODO: Enable with Service support
-	//virtual void CreateWindow(const WindowParameters&, std::shared_ptr<RasterModule>&) = 0;
+		OnWindowCreated(window);
+
+		return window;
+	}
+
+	void DestroyWindow(std::size_t index)
+	{
+		if (index < windows_.size())
+		{
+			OnWindowDestroyed(windows_[index]);
+			windows_.erase(windows_.begin() + index);
+
+			if (windows_.empty())
+			{
+				active_ = false;
+			}
+		}
+	}
+
+	WindowType* GetWindow(std::size_t index)
+	{
+		return index < windows_.size() ? &windows_[index] : nullptr;
+	}
+
+	WindowType& GetPrimaryWindow()
+	{
+		return windows_.front();
+	}
+
+	std::span<WindowType> GetWindows()
+	{
+		return windows_;
+	}
+
+	std::size_t GetWindowCount() const
+	{
+		return windows_.size();
+	}
+
+	virtual void Update() = 0;
+
+	virtual bool Active() const
+	{
+		return active_;
+	}
 
 	virtual std::span<const char*> GetRasterExtensions() = 0;
 
-	//virtual Window& MasterWindow() = 0;
-
 protected:
+	// Override these for backend-specific window lifecycle
+	virtual void OnWindowCreated(WindowType& window)
+	{
+	}
+
+	virtual void OnWindowDestroyed(WindowType& window)
+	{
+	}
+
+	std::vector<WindowType> windows_;
 	bool active_;
 };

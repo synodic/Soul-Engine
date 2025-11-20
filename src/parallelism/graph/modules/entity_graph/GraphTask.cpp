@@ -1,6 +1,5 @@
-module synodic.soul.engine;
-import :parallelism.graph.graph_task;
-import :parallelism.scheduler;
+module synodic.soul.graph;
+import synodic.soul.scheduler;
 import std;
 
 GraphTask::GraphTask(std::shared_ptr<SchedulerModule>& scheduler) noexcept:

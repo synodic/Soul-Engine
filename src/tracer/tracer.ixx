@@ -1,7 +1,7 @@
-export module synodic.soul.engine:tracer;
+export module synodic.soul.tracer;
 
-export import :tracer.camera;
-export import :tracer.film;
-export import :tracer.filter;
-export import :tracer.ray;
-export import :tracer.ray_job;
+export import :camera;
+export import :film;
+export import :filter;
+export import :ray;
+export import :ray_job;

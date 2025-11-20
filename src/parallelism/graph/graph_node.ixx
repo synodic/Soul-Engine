@@ -1,6 +1,6 @@
-export module synodic.soul.engine:parallelism.graph.graph_node;
+export module synodic.soul.graph:graph_node;
 
-import synodic.soul.engine:parallelism.scheduler.task_parameters;
+import synodic.soul.scheduler;
 import std;
 
 // Handles the topology of the graph

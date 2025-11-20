@@ -1,6 +1,4 @@
-module synodic.soul.engine;
-import :parallelism.graph.graph;
-import :parallelism.graph.graph_node;
+module synodic.soul.graph;
 import std;
 
 Graph::Graph(std::shared_ptr<SchedulerModule>& scheduler):

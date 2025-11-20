@@ -1,6 +1,7 @@
 export module synodic.soul.engine:core.object;
 
-import :types;
+import std;
+import synodic.soul.core;
 
 export class Object {
 public:

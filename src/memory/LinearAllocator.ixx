@@ -1,6 +1,6 @@
-export module synodic.soul.engine:memory.linear_allocator;
+export module synodic.soul.memory:linear_allocator;
 
-import :memory.allocator;
+import :allocator;
 import std;
 
 /*This class extends the base allocator class and provides

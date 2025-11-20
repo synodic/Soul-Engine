@@ -1,7 +1,7 @@
-export module synodic.soul.engine:display.gui.layout;
+export module synodic.soul.gui:layout;
 
 import std;
-import :display.gui.widget;
+import :widget;
 
 export class Layout : public Widget
 {

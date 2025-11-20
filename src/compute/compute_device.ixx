@@ -1,6 +1,6 @@
-export module synodic.soul.engine:compute.device;
+export module synodic.soul.compute:device;
 
-import :compute.policy;
+import :policy;
 
 export template<typename T>
 class ComputeDevice {

@@ -1,4 +1,4 @@
-export module synodic.soul.engine:core.composition.event;
+export module synodic.soul.core:event;
 
 import :types;
 import :utility;

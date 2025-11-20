@@ -1,8 +1,8 @@
-export module synodic.soul.engine:parallelism.graph.graph;
+export module synodic.soul.graph:graph;
 
-import :parallelism.graph.graph_node;
-import :parallelism.graph.graph_task;
-import :parallelism.scheduler;
+import :graph_node;
+import :graph_task;
+import synodic.soul.scheduler;
 import std;
 
 export class Graph : public GraphNode {

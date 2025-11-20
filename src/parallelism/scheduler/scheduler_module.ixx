@@ -1,8 +1,7 @@
-export module synodic.soul.engine:parallelism.scheduler.scheduler_module;
+export module synodic.soul.scheduler:scheduler_module;
 
-import :core.interface.module;
-import :parallelism.scheduler.task_parameters;
-import :types;
+import synodic.soul.core;
+import :task_parameters;
 import std;
 
 // Temporary placeholder scheduler backends until legacy headers are converted to modules

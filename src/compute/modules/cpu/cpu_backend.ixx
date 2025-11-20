@@ -1,7 +1,7 @@
 export module synodic.soul.engine:compute.cpu.backend;
 
 import :compute.backend;
-import :utility;
+import synodic.soul.core;
 
 export class CPUBackend : public ComputeBackend<CPUBackend> {
 

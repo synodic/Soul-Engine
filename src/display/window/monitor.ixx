@@ -1,4 +1,4 @@
-export module synodic.soul.engine:display.window.monitor;
+export module synodic.soul.window:monitor;
 
 import std;
 

@@ -1,6 +1,7 @@
 export module synodic.soul.engine:core.structure.acceleration.lbvh_manager;
 
-//#include "Parallelism/ComputeOld/ComputeBuffer.h"
+import std;
+import synodic.soul.core;
 import :core.geometry.bounding_box;
 
 //#include "CUDA/BVH.cuh"

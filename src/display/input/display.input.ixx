@@ -1,5 +1,5 @@
-export module synodic.soul.engine:display.input;
+export module synodic.soul.input;
 
-export import :display.input.button;
-export import :display.input.input_set;
-export import :display.input.input_module;
+export import :button;
+export import :input_set;
+export import :input_module;

@@ -1,1 +1,1 @@
-module synodic.soul.engine:compute.cuda.device;
+module synodic.soul.compute.backend.cuda;

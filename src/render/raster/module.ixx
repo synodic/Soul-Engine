@@ -1,12 +1,14 @@
-export module synodic.soul.engine:render.raster;
+export module synodic.soul.raster;
 
 import std;
 
-export import :render.raster.types;
-export import :render.raster.resource;
-export import :render.raster.commands;
-export import :render.raster.device;
-export import :render.raster.command_list;
+import synodic.soul.core;
+
+export import :types;
+export import :resource;
+export import :commands;
+export import :device;
+export import :command_list;
 
 // Note: Forward declarations used here to avoid circular dependencies
 // These types are only used in shared_ptr parameters in factory methods

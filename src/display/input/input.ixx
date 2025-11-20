@@ -1,9 +1,9 @@
-export module synodic.soul.engine:display.input.input_module;
+export module synodic.soul.input:input_module;
 
 import std;
-import :core.interface.module;
-import :display.input.input_set;
-import :display.input.button;
+import synodic.soul.core;
+import :input_set;
+import :button;
 
 export class InputModule : Module<InputModule>
 {

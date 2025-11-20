@@ -1,6 +1,10 @@
-export module synodic.soul.engine:render.raster.types;
+export module synodic.soul.raster:types;
 
-import :core.composition.entity.registry;
+import std;
+import synodic.soul.core;
+
+// Temporary type until proper vector types are available
+export struct uvec2 { std::uint32_t x, y; };
 
 export struct ShaderSet
 {

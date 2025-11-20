@@ -1,7 +1,7 @@
 export module synodic.soul.engine:compute.cpu.device;
 
 import :compute.device;
-import :utility;
+import synodic.soul.core;
 
 export class CPUDevice : public ComputeDevice<CPUDevice> {
 

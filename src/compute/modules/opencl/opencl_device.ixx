@@ -1,7 +1,7 @@
 export module synodic.soul.engine:compute.opencl.device;
 
 import :compute.compute_device;
-import :utility;
+import synodic.soul.core;
 
 export class OpenCLDevice : public ComputeDevice<OpenCLDevice> {
 

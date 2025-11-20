@@ -14,7 +14,6 @@ set_target_properties(sample
         LINKER_LANGUAGE CXX
 	   	CXX_EXTENSIONS OFF
         CXX_STANDARD 23
-        VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/Build"
 )
 
 target_link_libraries(sample

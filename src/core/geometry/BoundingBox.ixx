@@ -1,6 +1,7 @@
 export module synodic.soul.engine:core.geometry.bounding_box;
 
-import :core.composition.component;
+import std;
+import synodic.soul.core;
 
 // TODO: Replace with proper vector types (glm removed)
 

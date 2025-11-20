@@ -1,1 +1,1 @@
-module synodic.soul.engine:compute.mock.device;
+module synodic.soul.compute.backend.mock;

@@ -1,12 +1,11 @@
-export module synodic.soul.engine:render.raster.commands;
+export module synodic.soul.raster:commands;
 
 import std;
-import :render.raster.types;
-import :render.raster.resource;
-import :core.composition.entity.registry;
+import synodic.soul.core;
+import :types;
+import :resource;
 
-// Temporary types until proper ones are available
-struct uvec2 { std::uint32_t x, y; };
+// Temporary type until proper buffer types are available
 template<typename T> using ExternalBuffer = std::vector<T>;
 
 export enum class CommandType {

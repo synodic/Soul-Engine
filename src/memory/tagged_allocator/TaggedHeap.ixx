@@ -1,4 +1,4 @@
-export module synodic.soul.engine:memory.tagged_allocator.tagged_heap;
+export module synodic.soul.memory:tagged_heap;
 
 import std;
 
@@ -14,7 +14,7 @@ export class TaggedHeap {
 		std::map<std::string, void*> _nextFree; // address of the next free blocks in a tag's part of the heap
 		size_t _usedSpace;
 		size_t _capacity;
-	
+
 	public:
 		TaggedHeap(void*, size_t); // Constructor for creating TaggedHeap
 		bool CreateTag(std::string tag, size_t size);

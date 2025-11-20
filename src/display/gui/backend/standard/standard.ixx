@@ -1,8 +1,8 @@
-export module synodic.soul.engine:display.gui.standard;
+export module synodic.soul.gui.backend.standard;
 
-import :display.gui;
+import synodic.soul.gui;
 
 export class StandardGUIBackend
 {
-	
+
 };

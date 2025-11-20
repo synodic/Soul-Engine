@@ -1,6 +1,6 @@
-export module synodic.soul.engine:render.raster.mock;
+export module synodic.soul.raster.backend.mock;
 
-import :render.raster;
+import synodic.soul.raster;
 
 export class MockRasterBackend : public RasterModule
 {

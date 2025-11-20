@@ -1,7 +1,7 @@
-export module synodic.soul.engine:memory.tagged_allocator.tagged_allocator;
+export module synodic.soul.memory:tagged_allocator;
 
-import :memory.allocator;
-import :memory.tagged_allocator.tagged_heap;
+import :allocator;
+import :tagged_heap;
 import std;
 
 /*Tagged Allocator is an allocator class that utilizes the tagged heap for per-module memory management.
@@ -16,7 +16,7 @@ export class TaggedAllocator : public Allocator {
 		std::string _tag;
 		size_t _blockSize;
 		size_t _numBlocks;
-		
+
 
 	public:
 		TaggedAllocator(TaggedHeap* heap, const std::string &tag, uint8_t align=4);
@@ -24,5 +24,5 @@ export class TaggedAllocator : public Allocator {
 		void* allocate(size_t size, uint8_t align=4);
 		void* deallocate(void* block);
 		void clear();
-		
+
 };

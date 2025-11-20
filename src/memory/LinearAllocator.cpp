@@ -1,6 +1,6 @@
-module synodic.soul.engine;
-import :memory.allocator;
-import :memory.linear_allocator;
+module synodic.soul.memory;
+import :allocator;
+import :linear_allocator;
 
 import std;
 

@@ -1,16 +1,6 @@
-export module synodic.soul.engine:transput.shader.loader;
+module synodic.soul.transput;
 
-import :transput.resource;
+import :resource;
 import std;
 
-export class ShaderLoader : public ResourceLoader {
-
-public:
-
-	ShaderLoader() = default;
-	~ShaderLoader() override = default;
-
-	void Load(const std::string_view&) override = 0;
-
-
-};
+// ShaderLoader is pure virtual, no implementation needed

@@ -1,6 +1,6 @@
-export module synodic.soul.engine:display.gui.widget;
+export module synodic.soul.gui:widget;
 
-import :core.composition.component;
+import synodic.soul.core;
 
 import std;
 

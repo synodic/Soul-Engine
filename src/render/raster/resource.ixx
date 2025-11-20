@@ -1,7 +1,7 @@
-export module synodic.soul.engine:render.raster.resource;
+export module synodic.soul.raster:resource;
 
 import std;
-import :core.composition.component;
+import synodic.soul.core;
 
 export enum class ResourceType {
 	Buffer,

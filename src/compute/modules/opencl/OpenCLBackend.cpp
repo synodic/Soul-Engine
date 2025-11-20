@@ -1,1 +1,1 @@
-module synodic.soul.engine:compute.opencl.backend;
+module synodic.soul.compute.backend.opencl;

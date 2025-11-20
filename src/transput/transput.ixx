@@ -1,3 +1,3 @@
-export module synodic.soul.engine:transput;
+export module synodic.soul.transput;
 
-export import :transput.resource;
+export import :resource;

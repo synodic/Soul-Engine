@@ -1,14 +1,14 @@
-export module synodic.soul.engine:render.graph;
+export module synodic.soul.render.graph;
 
-export import :render.graph.parameter;
-export import :render.graph.builder;
+export import :parameter;
+export import :builder;
 
-import :core.composition.entity.registry;
-import :parallelism.graph;
-import :parallelism.scheduler;
-import :render.graph.parameter;
-import :render.graph.builder;
-import :render.raster.command_list;
+import synodic.soul.core;
+import synodic.soul.raster;
+import synodic.soul.scheduler;
+import synodic.soul.graph;
+import :parameter;
+import :builder;
 import std;
 
 export class RenderGraphModule {

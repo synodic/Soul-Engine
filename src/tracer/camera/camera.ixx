@@ -1,7 +1,8 @@
-export module synodic.soul.engine:tracer.camera;
+export module synodic.soul.tracer:camera;
 
-import :types;
-import :tracer.film;
+import std;
+import synodic.soul.core;
+import :film;
 import std;
 
 // TODO: Replace glm types with module types
